@@ -15,15 +15,21 @@ BUZZ = "Buzz"
 def fizzbuzz(number): 
     result = []
     for number in range(1, number + 1):
-        if number % 3 == 0 and number % 5 == 0:
+        if is_divisible_by_three(number) and is_divisible_by_five(number) == 0:
             result.append(f"{FIZZ}{BUZZ}")
-        elif number % 3 == 0:
+        elif is_divisible_by_three(number):
             result.append(FIZZ)
-        elif number % 5 == 0:
+        elif is_divisible_by_five(number):
             result.append(BUZZ)
         else:
             result.append(number)
     return result
+
+def is_divisible_by_five(number):
+    return number % 5
+
+def is_divisible_by_three(number):
+    return number % 3 == 0
 
 
 # Unit Tests
