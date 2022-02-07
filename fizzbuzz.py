@@ -9,9 +9,21 @@
 # - Wenn keines davon zutrifft, soll einfach nur die Zahl selbst ausgegeben werden.
 # - Das Ergebnis der Aufgabe soll eine Python Liste sein, die alle Ausgaben von 0 bis n enthaelt.
 
+FIZZ = "Fizz"
+BUZZ = "Buzz"
 
-def fizzbuzz(n):
-    pass
+def fizzbuzz(number): 
+    result = []
+    for number in range(1, number + 1):
+        if number % 3 == 0 and number % 5 == 0:
+            result.append(f"{FIZZ}{BUZZ}")
+        elif number % 3 == 0:
+            result.append(FIZZ)
+        elif number % 5 == 0:
+            result.append(BUZZ)
+        else:
+            result.append(number)
+    return result
 
 
 # Unit Tests
