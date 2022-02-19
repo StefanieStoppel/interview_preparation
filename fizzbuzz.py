@@ -12,6 +12,7 @@
 FIZZ = "Fizz"
 BUZZ = "Buzz"
 
+
 def fizzbuzz(number): 
     result = []
     for num in range(1, number + 1):
@@ -25,9 +26,11 @@ def fizzbuzz(number):
             result.append(num)
     return result
 
-def fizzbuzz_gen(number): 
+
+def fizzbuzz_generator(number):
     for num in range(1, number + 1):
         yield compute_fizzbuzz_value_for(num)
+
 
 def compute_fizzbuzz_value_for(number):
     if is_divisible_by_three(number) and is_divisible_by_five(number):
@@ -38,8 +41,10 @@ def compute_fizzbuzz_value_for(number):
         return BUZZ
     return number
 
+
 def is_divisible_by_five(number):
     return number % 5 == 0
+
 
 def is_divisible_by_three(number):
     return number % 3 == 0
@@ -48,13 +53,16 @@ def is_divisible_by_three(number):
 # Unit Tests
 
 def test_three():
-    assert list(fizzbuzz_gen(3)) == [1, 2, "Fizz"]
+    assert list(fizzbuzz_generator(3)) == [1, 2, "Fizz"]
+
 
 def test_seven():
-    assert list(fizzbuzz_gen(7)) == [1, 2, "Fizz", 4, "Buzz", "Fizz", 7]
+    assert list(fizzbuzz_generator(7)) == [1, 2, "Fizz", 4, "Buzz", "Fizz", 7]
+
 
 def test_twenty():
-    assert list(fizzbuzz_gen(20)) == [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz", 16, 17, "Fizz", 19, "Buzz"]
+    assert list(fizzbuzz_generator(20)) == [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz", 16, 17, "Fizz", 19, "Buzz"]
+
 
 if __name__ == '__main__':
     test_three()
