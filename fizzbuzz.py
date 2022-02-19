@@ -7,7 +7,7 @@
 # - Wenn die Zahl durch 5 teilbar ist, soll der String "Buzz" ausgegeben werden.
 # - Wenn die Zahl durch 3 und 5 teilbar ist, soll der String "FizzBuzz" ausgegeben werden.
 # - Wenn keines davon zutrifft, soll einfach nur die Zahl selbst ausgegeben werden.
-# - Das Ergebnis der Aufgabe soll eine Python Liste sein, die alle Ausgaben von 0 bis n enthaelt.
+# - Das Ergebnis der Aufgabe soll eine Python Liste sein, die alle Ausgaben von 1 bis n enthaelt.
 
 FIZZ = "Fizz"
 BUZZ = "Buzz"
