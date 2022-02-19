@@ -29,3 +29,4 @@ How do you proceed?
 - casual: number of non-registered user rentals initiated
 - registered: number of registered user rentals initiated
 - count: number of total rentals
+- rental_station_id: ID of the station where the bike was rented
